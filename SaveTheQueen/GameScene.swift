@@ -367,62 +367,6 @@ class GameScene: SKScene {
         
     }
     
-    /*func printNeighbours() {
-        hideNeighbours()
-        /*if currentCell == nil {
-            print("currentCell is NIL")
-        }*/
-        if currentCell.cellNeighbours.contains("N") {
-            print("N")
-            printCellN(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: true)
-        } else {
-            print("--- N")
-            printCellN(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: false)
-        }
-        
-        if currentCell.cellNeighbours.contains("NE") {
-            print("NE")
-            printCellNE(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: true)
-        } else {
-            print("--- NE")
-            printCellNE(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: false)
-        }
-        
-        if currentCell.cellNeighbours.contains("SE") {
-            print("SE")
-            printCellSE(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: true)
-        } else {
-            print("--- SE")
-            printCellSE(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: false)
-        }
-        
-        if currentCell.cellNeighbours.contains("S") {
-            print("S")
-            printCellS(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: true)
-        } else {
-            print("--- S")
-            printCellS(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: false)
-        }
-        
-        if currentCell.cellNeighbours.contains("SW") {
-            print("SW")
-            printCellSW(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: true)
-        } else {
-            print("--- SW")
-            printCellSW(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: false)
-        }
-        
-        if currentCell.cellNeighbours.contains("NW") {
-            print("NW")
-            printCellNW(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: true)
-        } else {
-            print("--- NW")
-            printCellNW(posX: currentCell.position.x, posY: currentCell.position.y, isAvailable: false)
-        }
-    }*/
-    
-    
-    
     func printCellWithColRow(col : Int, row : Int, isAvailable : Bool) {
         if (col >= 0 && row >= 0) {
             let cellName : String = "currentcell\(col)\(row)"
@@ -455,74 +399,6 @@ class GameScene: SKScene {
         }
     }
     
-    
-    
-    
-    /*func printCellN(posX : CGFloat, posY : CGFloat, isAvailable : Bool) {
-        if (isAvailable) {
-            cellN = SKSpriteNode(imageNamed: "hexagon_green")
-        }else {
-            cellN = SKSpriteNode(imageNamed: "hexagon_red")
-        }
-        cellN.position = CGPoint(x:posX, y:posY + CELL_HEIGHT)
-        
-        self.addChild(cellN)
-    }
-    
-    func printCellNE(posX : CGFloat, posY : CGFloat, isAvailable : Bool) {
-        if (isAvailable) {
-            cellNE = SKSpriteNode(imageNamed: "hexagon_green")
-        }else {
-            cellNE = SKSpriteNode(imageNamed: "hexagon_red")
-        }
-        cellNE.position = CGPoint(x:posX + 3 * CELL_WIDTH / 4, y:posY + CELL_HEIGHT / 2)
-        
-        self.addChild(cellNE)
-    }
-    
-    func printCellSE(posX : CGFloat, posY : CGFloat, isAvailable : Bool) {
-        if (isAvailable) {
-            cellSE = SKSpriteNode(imageNamed: "hexagon_green")
-        }else {
-            cellSE = SKSpriteNode(imageNamed: "hexagon_red")
-        }
-        cellSE.position = CGPoint(x:posX + 3 * CELL_WIDTH / 4, y:posY - CELL_HEIGHT / 2)
-        
-        self.addChild(cellSE)
-    }
-
-    func printCellS(posX : CGFloat, posY : CGFloat, isAvailable : Bool) {
-        if (isAvailable) {
-            cellS = SKSpriteNode(imageNamed: "hexagon_green")
-        }else {
-            cellS = SKSpriteNode(imageNamed: "hexagon_red")
-        }
-        cellS.position = CGPoint(x:posX, y:posY - CELL_HEIGHT)
-        
-        self.addChild(cellS)
-    }
-    
-    func printCellSW(posX : CGFloat, posY : CGFloat, isAvailable : Bool) {
-        if (isAvailable) {
-            cellSW = SKSpriteNode(imageNamed: "hexagon_green")
-        }else {
-            cellSW = SKSpriteNode(imageNamed: "hexagon_red")
-        }
-        cellSW.position = CGPoint(x:posX - 3 * CELL_WIDTH / 4, y:posY - CELL_HEIGHT / 2)
-        
-        self.addChild(cellSW)
-    }
-    
-    func printCellNW(posX : CGFloat, posY : CGFloat, isAvailable : Bool) {
-        if (isAvailable) {
-            cellNW = SKSpriteNode(imageNamed: "hexagon_green")
-        }else {
-            cellNW = SKSpriteNode(imageNamed: "hexagon_red")
-        }
-        cellNW.position = CGPoint(x:posX - 3 * CELL_WIDTH / 4, y:posY + CELL_HEIGHT / 2)
-        
-        self.addChild(cellNW)
-    }*/
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //print("touchesBegan cell begin")
         if (previousCell != nil) {
